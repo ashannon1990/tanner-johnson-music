@@ -23,12 +23,15 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     flexWrap: 'wrap',
+    background: 'radial-gradient(#1b2735 50%, #090a0f 100%)',
+    color: 'white'
   },
   toolbarTitle: {
     flexGrow: 1,
   },
   link: {
     margin: theme.spacing(1, 1.5),
+    color: 'white'
   },
   heroContent: {
     padding: theme.spacing(8, 0, 6),
