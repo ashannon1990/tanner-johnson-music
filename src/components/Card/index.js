@@ -38,7 +38,7 @@ export default function BioCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" href='/contact'>
           Contact me
         </Button>
       </CardActions>

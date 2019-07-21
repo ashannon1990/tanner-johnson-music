@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Jumbotron from '../components/Jumbotron/index'
 import BioCard from '../components/Card/index'
 import Grid from '@material-ui/core/Grid';
+import './style.css'
+import Container from '@material-ui/core/Container';
 // import Typography from '@material-ui/core/Typography';
 
 class Home extends Component {
@@ -9,15 +11,19 @@ class Home extends Component {
         return (
         <div>
             <Jumbotron>
+                <Container>
                 <Grid container spacing={3}
                 alignItems="center"
                 justify="center">
                  <Grid item xs={12} sm={8} md={6} lg={3}>
+                     <div id="myID">
                     <BioCard>
                     
                     </BioCard>
+                    </div>
                      </Grid>
                  </Grid>
+                 </Container>
             </Jumbotron>
         </div>
         )

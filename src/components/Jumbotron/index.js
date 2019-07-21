@@ -17,7 +17,7 @@ export default function Jumbotron({children}) {
 
   return (
     <div>
-      <Paper id="jumbotron" className={classes.root}>
+      <Paper id="jumbotron" style={{backgroundBlendMode: 'overlay'}} className={classes.root}>
         {children}
       </Paper>
     </div>

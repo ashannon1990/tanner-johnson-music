@@ -36,7 +36,7 @@ export default function Contact() {
   return (
       <div>
           
-    <form className={classes.container} noValidate autoComplete="off">
+    <form className={classes.container} style={{marginLeft: "10px"}} noValidate autoComplete="off">
         <div>
       <TextField
         id="standard-full-width"
@@ -46,7 +46,7 @@ export default function Contact() {
         onChange={handleChange('name')}
         margin="normal"
         variant="filled"
-        style={{width: '50vw'}}
+        style={{width: '100%'}}
       />
       <TextField
         id="filled-email-input"
@@ -59,7 +59,7 @@ export default function Contact() {
         autoComplete="email"
         margin="normal"
         variant="filled"
-        style={{width: '50vw'}}
+        style={{width: '100%'}}
       />
       <TextField
         id="standard-multiline-flexible"
@@ -70,11 +70,11 @@ export default function Contact() {
         className={classes.textField}
         margin="normal"
         variant="filled"
-        style={{width: '50vw'}}
+        style={{width: '100%'}}
       />
       </div>
       <div>
-      <Button variant="contained" color="primary" display="block" className={classes.button}>
+      <Button variant="contained" color="primary" display="block" style={{marginLeft: "10px"}} className={classes.button}>
           Submit
       </Button>
       </div>
