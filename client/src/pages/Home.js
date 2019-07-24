@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Jumbotron from '../components/Jumbotron/index'
+// import Jumbotron from '../components/Jumbotron/index'
 import BioCard from '../components/Card/index'
 import Grid from '@material-ui/core/Grid';
 import './style.css'
@@ -9,8 +9,9 @@ import Container from '@material-ui/core/Container';
 class Home extends Component {
     render () {
         return (
+        <Container maxWidth='lg'>    
         <div>
-            <Jumbotron>
+            {/* <Jumbotron> */}
                 <Container>
                 <Grid container spacing={3}
                 alignItems="center"
@@ -24,8 +25,9 @@ class Home extends Component {
                      </Grid>
                  </Grid>
                  </Container>
-            </Jumbotron>
+            {/* </Jumbotron> */}
         </div>
+        </Container>
         )
     }
 }

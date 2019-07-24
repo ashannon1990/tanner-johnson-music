@@ -6,6 +6,7 @@ import ContactField from './pages/Contact'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './pages/Home'
 import Music from './pages/Music'
+import Admin from './pages/Admin'
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/mymusic" component={Music} />
-          <Route path="/contact" component={ContactField} />
+          <Route exact path="/contact" component={ContactField} />
+          <Route exact path="/admin" component={Admin} />
         </Switch>
       </div>
     </Router>

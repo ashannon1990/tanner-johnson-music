@@ -1,11 +1,11 @@
 import React from 'react';
 import YouTube from 'react-youtube';
  
-class AveMaria extends React.Component {
+class Video extends React.Component {
   render() {
     const opts = {
       height: '390',
-      width: '640',
+      width: '100%',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
       }
@@ -26,4 +26,4 @@ class AveMaria extends React.Component {
   }
 }
 
-export default AveMaria
+export default Video

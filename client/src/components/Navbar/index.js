@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     flexWrap: 'wrap',
-    background: 'radial-gradient(#1b2735 50%, #090a0f 100%)',
+    background: '#333333',
     color: 'white'
   },
   toolbarTitle: {
@@ -61,8 +61,8 @@ function Navbar() {
   const classes = useStyles();
     return (
         <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-          <Toolbar className={classes.toolbar} style={{boxShadow: '3px 3px 5px black'}}>
-            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle} style={{textAlign: 'center'}}>
+          <Toolbar className={classes.toolbar} style={{boxShadow: '0px 3px 5px black'}}>
+            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
               Tanner Johnson Music
             </Typography>
             <nav>

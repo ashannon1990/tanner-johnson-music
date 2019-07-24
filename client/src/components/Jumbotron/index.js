@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import './style.css'
-// import JumbotronBackground from '../../photos/Tanner6.jpg'
+
 
 
 
