@@ -74,7 +74,7 @@ export default function Contact() {
       />
       </div>
       <div>
-      <Button variant="contained" color="primary" display="block" style={{marginLeft: "10px"}} className={classes.button}>
+      <Button variant="contained" color="primary" display="block" style={{margin: "10px", background: '#333333'}} className={classes.button}>
           Submit
       </Button>
       </div>

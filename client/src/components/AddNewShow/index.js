@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -25,37 +26,55 @@ export default function AddNewShow() {
   };
 
   return (
-    <form className={classes.container} noValidate>
-      <TextField
-        style={{ width: '100%' }}
-        id="standard-name"
-        label="Venue Name"
-        className={classes.textField}
-        value={values.name}
-        onChange={handleChange('name')}
-        margin="normal"
-      />
-      <TextField
-        style={{ width: '100%' }}
-        id="standard-textarea"
-        label="Venue Address"
-        placeholder="Venue Address"
-        multiline
-        className={classes.textField}
-        margin="normal"
-      />
-      <br/>
-      <TextField
-        style={{ width: '100%' }}
-        id="datetime-local"
-        label="Date and time"
-        type="datetime-local"
-        // defaultValue="2017-05-24T10:30"
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
-    </form>
+    <div>
+      <form className={classes.container} noValidate>
+        <TextField
+          style={{ width: '100%' }}
+          id="standard-name"
+          label="Venue Name"
+          className={classes.textField}
+          value={values.name}
+          onChange={handleChange('name')}
+          margin="normal"
+        />
+        <TextField
+          style={{ width: '100%' }}
+          id="standard-textarea"
+          label="Venue Address"
+          placeholder="Venue Address"
+          multiline
+          className={classes.textField}
+          margin="normal"
+        />
+
+        <TextField
+          style={{ width: '100%' }}
+          id="date"
+          label="Date"
+          type="date"
+          className={classes.textField}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <br />
+        <TextField
+          style={{ width: '100%' }}
+          id="time"
+          label="Time"
+          type="time"
+          className={classes.textField}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          inputProps={{
+            step: 300, // 5 min 
+          }}
+        />
+      </form >
+      <Button variant="contained" color="primary" style={{ margin: '10px', background: '#333333' }} className={classes.button}>
+        Submit
+     </Button>
+    </div>
   );
 }
