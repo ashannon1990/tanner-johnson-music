@@ -1,7 +1,6 @@
 import React from 'react';
 import Contact from '../components/Contact/index'
 import Grid from '@material-ui/core/Grid'
-import Modal from '../components/Modal/index'
 import Container from '@material-ui/core/Container';
 
 export default function ContactFoeld() {
@@ -13,7 +12,6 @@ export default function ContactFoeld() {
         <Contact />
       </Grid>
     </Grid>
-    <Modal/>
     </div>
     </Container>
   );

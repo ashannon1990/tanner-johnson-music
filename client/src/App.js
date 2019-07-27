@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './pages/Home'
 import Music from './pages/Music'
 import Admin from './pages/Admin'
+import SignIn from './pages/SignIn'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/mymusic" component={Music} />
           <Route exact path="/contact" component={ContactField} />
           <Route exact path="/admin" component={Admin} />
+          <Route exact path="/signin" component={SignIn} />
         </Switch>
       </div>
     </Router>

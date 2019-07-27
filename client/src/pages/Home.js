@@ -10,11 +10,13 @@ import SimpleSlider from '../components/Carousel/index'
 class Home extends Component {
     render () {
         return (
+            <div>
+        <SimpleSlider />
         <Container maxWidth='lg'>    
         <div>
             {/* <Jumbotron> */}
                 <Container>
-                <SimpleSlider />
+                
                 <Grid container spacing={3}
                 alignItems="center"
                 justify="center">
@@ -28,6 +30,7 @@ class Home extends Component {
             {/* </Jumbotron> */}
         </div>
         </Container>
+        </div>
         )
     }
 }
