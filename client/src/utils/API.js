@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all saved messages
-  getSaved: function() {
+  getMessages: function() {
     return axios.get("/api/messages");
   },
   // Deletes the saved book with the given id

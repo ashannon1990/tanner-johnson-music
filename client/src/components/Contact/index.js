@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Contact() {
+export default function Contact({handleFormSubmit}) {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     name: '',
@@ -39,7 +39,7 @@ export default function Contact() {
     <form className={classes.container} style={{marginLeft: "10px"}} noValidate autoComplete="off">
         <div>
       <TextField
-        id="standard-full-width"
+        id="contactName"
         label="Name"
         className={classes.textField}
         value={values.name}
@@ -49,7 +49,7 @@ export default function Contact() {
         style={{width: '90%'}}
       />
       <TextField
-        id="filled-email-input"
+        id="contactEmail"
         label="Email"
         className={classes.textField}
         type="email"
@@ -62,7 +62,7 @@ export default function Contact() {
         style={{width: '90%'}}
       />
       <TextField
-        id="standard-multiline-flexible"
+        id="contactMessage"
         label="Message"
         multiline
         rowsMax="10"
@@ -74,7 +74,7 @@ export default function Contact() {
       />
       </div>
       <div>
-      <Button variant="contained" color="primary" display="block" style={{margin: "10px", background: '#333333'}} className={classes.button}>
+      <Button onClick={handleFormSubmit} variant="contained" color="primary" display="block" style={{margin: "10px", background: '#333333'}} className={classes.button}>
           Submit
       </Button>
       </div>

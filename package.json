@@ -1,0 +1,41 @@
+{
+  "name": "tanner-johnson-music",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "dependencies": {
+    "date-fns": "^2.0.0-beta.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-scripts": "^3.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-slick": "^0.24.0",
+    "react-youtube": "^7.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashannon1990/tanner-johnson-music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashannon1990/tanner-johnson-music/issues"
+  },
+  "homepage": "https://github.com/ashannon1990/tanner-johnson-music#readme"
+}
