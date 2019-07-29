@@ -46,7 +46,7 @@ export default function Contact() {
         onChange={handleChange('name')}
         margin="normal"
         variant="filled"
-        style={{width: '100%'}}
+        style={{width: '90%'}}
       />
       <TextField
         id="filled-email-input"
@@ -59,7 +59,7 @@ export default function Contact() {
         autoComplete="email"
         margin="normal"
         variant="filled"
-        style={{width: '100%'}}
+        style={{width: '90%'}}
       />
       <TextField
         id="standard-multiline-flexible"
@@ -70,7 +70,7 @@ export default function Contact() {
         className={classes.textField}
         margin="normal"
         variant="filled"
-        style={{width: '100%'}}
+        style={{width: '90%'}}
       />
       </div>
       <div>

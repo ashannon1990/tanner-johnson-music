@@ -41,7 +41,7 @@ export default function AddNewShow() {
     <div>
       <form className={classes.container} noValidate>
         <TextField
-          style={{ width: '100%' }}
+          style={{ width: '90%', margin: '10px' }}
           id="venueName"
           label="Venue Name"
           className={classes.textField}
@@ -50,7 +50,7 @@ export default function AddNewShow() {
           margin="normal"
         />
         <TextField
-          style={{ width: '100%' }}
+          style={{ width: '90%', margin: '10px' }}
           id="venueAddress"
           label="Venue Address"
           placeholder="Venue Address"
@@ -61,7 +61,7 @@ export default function AddNewShow() {
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
          
             <KeyboardDatePicker
-              style={{ width: '100%' }}
+              style={{ width: '90%', margin: '10px' }}
               margin="normal"
               id="eventDate"
               label="Date"
@@ -72,7 +72,7 @@ export default function AddNewShow() {
               }}
             />
             <KeyboardTimePicker
-              style={{ width: '100%' }}
+              style={{ width: '90%', margin: '10px' }}
               margin="normal"
               id="eventTime"
               label="Time"

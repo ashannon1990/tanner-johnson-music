@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Tanner2 from "../../photos/Tanner1.jpg"
-import Tanner4 from "../../photos/Tanner3.jpg"
-import Tanner7 from "../../photos/Tanner6.jpg"
+import Tanner1 from "../../photos/Tanner1.jpg"
+import Tanner3 from "../../photos/Tanner3.jpg"
+import Tanner6 from "../../photos/Tanner6.jpg"
 // import Tanner8 from "../../photos/Tanner8.jpg"
 // import Tanner9 from "../../photos/Tanner9.jpg"
 // import Tanner10 from "../../photos/Tanner10.jpg"
@@ -15,7 +15,7 @@ export default class SimpleSlider extends Component {
       arrows: false,
       dots: false,
       infinite: true,
-      speed: 500,
+      speed: 750,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -25,13 +25,13 @@ export default class SimpleSlider extends Component {
       <div>
         <Slider {...settings}>
           <div>
-          <img style={{width: '100%'}} src={Tanner2} alt='pic' />
+          <img style={{width: '100%'}} src={Tanner1} alt='pic' />
           </div>
           <div>
-          <img style={{width: '100%'}} src={Tanner4} alt='pic' />
+          <img style={{width: '100%'}} src={Tanner3} alt='pic' />
           </div>
           <div>
-          <img style={{width: '100%'}} src={Tanner7} alt='pic' />
+          <img style={{width: '100%'}} src={Tanner6} alt='pic' />
           </div>
           {/* <div>
           <img style={{width: '100%'}} src={Tanner8} alt='pic' />
