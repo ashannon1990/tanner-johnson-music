@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const messageController = require("../controllers/messageController");
+const messageController = require("../../controllers/messageController");
 
 // Matches with "/api/messages"
 router.route("/")
@@ -7,10 +7,10 @@ router.route("/")
   .post(messageController.create);
 
 // Matches with "/api/messages/:id"
-router
-  .route("/:id")
-  .get(messageController.findById)
-  .put(messageController.update)
-  .delete(messageController.remove);
+// router
+//   .route("/:id")
+//   .get(messageController.findById)
+//   .put(messageController.update)
+//   .delete(messageController.remove);
 
 module.exports = router;

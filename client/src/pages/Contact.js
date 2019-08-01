@@ -7,19 +7,18 @@ import Typography from '@material-ui/core/Typography';
 import API from '../utils/API'
 
 class ContactField extends Component {
-  handleFormSubmit = event => {
+
+  saveMessage = (event, messageData) => {
     event.preventDefault();
-    this.saveMessage();
-  };
-
-  handleMessageSave = id => {
-    const message = this.state.message.find(message => message.id === id);
-
-    API.saveMessage({
-      name: message.name,
-      emsil: message.email,
-      message: message.message
-    }).then(() => this.getMessages());
+    if (messageData.name === '') {
+      alert("Enter your name")
+    } else if (messageData.email === '') {
+      alert("Enter your email")
+    } else if (messageData.message === '') {
+      alert("Please enter a message")
+    } else {
+      API.saveMessage(messageData).then((res) => console.log(res));
+    }
   };
 
   render() {
@@ -30,7 +29,7 @@ class ContactField extends Component {
             <Grid item xs={12} sm={9} md={6}>
               <Paper style={{ margin: '20px', opacity: '.8' }}>
                 <Typography style={{ textAlign: 'center' }} variant="h4">If you are interested in hiring me for your event, leave me a message.</Typography>
-                <Contact />
+                <Contact saveMessage={this.saveMessage} />
               </Paper>
             </Grid>
           </Grid>

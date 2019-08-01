@@ -21,12 +21,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Contact({handleFormSubmit}) {
+export default function Contact(props) {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     name: '',
     email: '',
-    message: '',
+    message: ''
   });
 
   const handleChange = name => event => {
@@ -34,51 +34,61 @@ export default function Contact({handleFormSubmit}) {
   };
 
   return (
-      <div>
-          
-    <form className={classes.container} style={{marginLeft: "10px"}} noValidate autoComplete="off">
+    <div>
+
+      <form className={classes.container} style={{ marginLeft: "10px" }} noValidate autoComplete="off">
         <div>
-      <TextField
-        id="contactName"
-        label="Name"
-        className={classes.textField}
-        value={values.name}
-        onChange={handleChange('name')}
-        margin="normal"
-        variant="filled"
-        style={{width: '90%'}}
-      />
-      <TextField
-        id="contactEmail"
-        label="Email"
-        className={classes.textField}
-        type="email"
-        name="email"
-        value={values.email}
-        onChange={handleChange('email')}
-        autoComplete="email"
-        margin="normal"
-        variant="filled"
-        style={{width: '90%'}}
-      />
-      <TextField
-        id="contactMessage"
-        label="Message"
-        multiline
-        rowsMax="10"
-        // defaultValue=""
-        className={classes.textField}
-        margin="normal"
-        variant="filled"
-        style={{width: '90%'}}
-      />
-      </div>
-      <div>
-      <Button onClick={handleFormSubmit} variant="contained" color="primary" display="block" style={{margin: "10px", background: '#333333'}} className={classes.button}>
-          Submit
-      </Button>
-      </div>
-    </form>
+          <TextField
+            id="contactName"
+            label="Name"
+            className={classes.textField}
+            value={values.name}
+            onChange={handleChange('name')}
+            margin="normal"
+            variant="filled"
+            style={{ width: '90%' }}
+          />
+          <TextField
+            id="contactEmail"
+            label="Email"
+            className={classes.textField}
+            type="email"
+            name="email"
+            value={values.email}
+            onChange={handleChange('email')}
+            autoComplete="email"
+            margin="normal"
+            variant="filled"
+            style={{ width: '90%' }}
+          />
+          <TextField
+            id="contactMessage"
+            label="Message"
+            multiline
+            rowsMax="10"
+            // defaultValue=""
+            className={classes.textField}
+            name="message"
+            onChange={handleChange('message')}
+            value={values.message}
+            margin="normal"
+            variant="filled"
+            style={{ width: '90%' }}
+          />
+        </div>
+        <div>
+          <Button onClick={event => props.saveMessage(event,
+            {
+              name: values.name,
+              email: values.email,
+              message: values.message
+            }
+            )}
+            variant="contained" color="primary" display="block" style={{ margin: "10px", background: '#333333' }} className={classes.button}>
+            Submit
+          </Button>
+        </div>
+      </form>
     </div>
   );
 }

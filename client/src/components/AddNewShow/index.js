@@ -22,15 +22,18 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function AddNewShow() {
-  const [selectedDate, setSelectedDate] = React.useState();
+export default function AddNewShow(props) {
   const classes = useStyles();
+  const [selectedDate, setSelectedDate] = React.useState();
   const [values, setValues] = React.useState({
-    multiline: 'Controlled',
+    venueName: '',
+    venueAddress: '',
+    eventDate: selectedDate,
   });
 
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
+
   };
 
   function handleDateChange(date) {
@@ -39,14 +42,14 @@ export default function AddNewShow() {
 
   return (
     <div>
-      <form className={classes.container} noValidate>
+      <form className={classes.container} noValidate autoComplete="off">
         <TextField
           style={{ width: '90%', margin: '10px' }}
           id="venueName"
           label="Venue Name"
           className={classes.textField}
-          value={values.name}
-          onChange={handleChange('name')}
+          value={values.venueName}
+          onChange={handleChange('venueName')}
           margin="normal"
         />
         <TextField
@@ -55,39 +58,50 @@ export default function AddNewShow() {
           label="Venue Address"
           placeholder="Venue Address"
           multiline
+          value={values.venueAddress}
+          onChange={handleChange('venueAddress')}
           className={classes.textField}
           margin="normal"
         />
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-         
-            <KeyboardDatePicker
-              style={{ width: '90%', margin: '10px' }}
-              margin="normal"
-              id="eventDate"
-              label="Date"
-              value={selectedDate}
-              onChange={handleDateChange}
-              KeyboardButtonProps={{
-                'aria-label': 'change date',
-              }}
-            />
-            <KeyboardTimePicker
-              style={{ width: '90%', margin: '10px' }}
-              margin="normal"
-              id="eventTime"
-              label="Time"
-              value={selectedDate}
-              onChange={handleDateChange}
-              KeyboardButtonProps={{
-                'aria-label': 'change time',
-              }}
-            />
-         
+
+          <KeyboardDatePicker
+            style={{ width: '90%', margin: '10px' }}
+            margin="normal"
+            id="eventDate"
+            label="Date"
+            value={selectedDate}
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+              'aria-label': 'change date',
+            }}
+          />
+          <KeyboardTimePicker
+            style={{ width: '90%', margin: '10px' }}
+            margin="normal"
+            id="eventTime"
+            label="Time"
+            value={selectedDate}
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+              'aria-label': 'change time',
+            }}
+          />
+
         </MuiPickersUtilsProvider>
+        <div>
+        <Button onClick={event => props.addUpcomingEvent(event,
+          {
+            venueName: values.venueName,
+            venueAddress: values.venueAddress,
+            date: selectedDate
+          }
+          )}
+          variant="contained" color="primary" style={{ margin: '10px', background: '#333333' }} className={classes.button}>
+          Submit
+      </Button>
+      </div>
       </form >
-      <Button variant="contained" color="primary" style={{ margin: '10px', background: '#333333' }} className={classes.button}>
-        Submit
-     </Button>
     </div>
   );
 }

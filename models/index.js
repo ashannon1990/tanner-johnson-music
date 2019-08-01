@@ -1,6 +1,6 @@
 module.exports = {
     Admin: require("./admin"),
-    Message: require("./messages"),
+    Message: require("./message"),
     Event: require("./newEvent")
   };
   

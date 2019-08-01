@@ -1,5 +1,5 @@
 var db = require("../models");
-var passport = require("passport")
+// var passport = require("passport")
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
@@ -13,21 +13,21 @@ router.use((req, res) =>
   res.sendFile(path.join(__dirname, "../client/build/index.html"))
 );
 
+
 module.exports = router;
 
 //middleware
+// module.exports = function (app) {
 
-module.exports = function (app) {
+//   app.post('/login',
+//     passport.authenticate('local', {
+//       successRedirect: '/admin',
+//       failureRedirect: '/login',
+//       failureFlash: true
+//     })
+//   );
+//   app.get("/admin", function(req, res) {
+//     res.render('/admin')
+//   });
 
-  app.post('/login',
-    passport.authenticate('local', {
-      successRedirect: '/admin',
-      failureRedirect: '/login',
-      failureFlash: true
-    })
-  );
-  app.get("/admin", function(req, res) {
-    res.render('/admin')
-  });
-
-}
+// }
