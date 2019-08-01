@@ -2,13 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
+// import 'date-fns';
+// import DateFnsUtils from '@date-io/date-fns';
+// import {
+//   MuiPickersUtilsProvider,
+//   KeyboardTimePicker,
+//   KeyboardDatePicker,
+// } from '@material-ui/pickers';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -24,11 +24,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function AddNewShow(props) {
   const classes = useStyles();
-  const [selectedDate, setSelectedDate] = React.useState();
+  // const [selectedDate, setSelectedDate] = React.useState();
   const [values, setValues] = React.useState({
     venueName: '',
     venueAddress: '',
-    eventDate: selectedDate,
+    eventDate: '',
+    eventTime: ''
   });
 
   const handleChange = name => event => {
@@ -36,9 +37,9 @@ export default function AddNewShow(props) {
 
   };
 
-  function handleDateChange(date) {
-    setSelectedDate(date);
-  }
+  // function handleDateChange(date) {
+  //   setSelectedDate(date);
+  // }
 
   return (
     <div>
@@ -63,7 +64,34 @@ export default function AddNewShow(props) {
           className={classes.textField}
           margin="normal"
         />
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <TextField
+       style={{ width: '90%', margin: '10px' }}
+        id="date"
+        label="Date"
+        type="date"
+        defaultValue=''
+        onChange={handleChange('eventDate')}
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+       <TextField
+       style={{ width: '90%', margin: '10px' }}
+        id="time"
+        label="Alarm clock"
+        type="time"
+        defaultValue="07:30"
+        onChange={handleChange('eventTime')}
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+        inputProps={{
+          step: 300, // 5 min
+        }}
+      />
+        {/* <MuiPickersUtilsProvider utils={DateFnsUtils}>
 
           <KeyboardDatePicker
             style={{ width: '90%', margin: '10px' }}
@@ -88,19 +116,20 @@ export default function AddNewShow(props) {
             }}
           />
 
-        </MuiPickersUtilsProvider>
+        </MuiPickersUtilsProvider> */}
         <div>
-        <Button onClick={event => props.addUpcomingEvent(event,
-          {
-            venueName: values.venueName,
-            venueAddress: values.venueAddress,
-            date: selectedDate
-          }
-          )}
-          variant="contained" color="primary" style={{ margin: '10px', background: '#333333' }} className={classes.button}>
-          Submit
-      </Button>
-      </div>
+          <Button onClick={event => props.addUpcomingEvent(event,
+            {
+              venueName: values.venueName,
+              venueAddress: values.venueAddress,
+              eventDate: values.eventDate,
+              eventTime: values.eventTime
+            }
+            )}
+            variant="contained" color="primary" style={{ margin: '10px', background: '#333333' }} className={classes.button}>
+            Submit
+          </Button>
+        </div>
       </form >
     </div>
   );
