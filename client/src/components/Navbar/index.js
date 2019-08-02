@@ -72,7 +72,7 @@ function Navbar() {
               <Link variant="button" color="textPrimary" href="/mymusic" className={classes.link}>
                 My Music
               </Link>
-              <Link variant="button" color="textPrimary" href="upcomingevents" className={classes.link}>
+              <Link variant="button" color="textPrimary" href="events" className={classes.link}>
                 Upcoming Events
               </Link>
               <Link variant="button" color="textPrimary" href="contact" className={classes.link}>

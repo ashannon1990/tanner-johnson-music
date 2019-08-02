@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Music from './pages/Music'
 import Admin from './pages/Admin'
 import SignIn from './pages/SignIn'
+import Events from './pages/Events'
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/mymusic" component={Music} />
+          <Route exact path="/events" component={Events} />
           <Route exact path="/contact" component={ContactField} />
           <Route exact path="/admin" component={Admin} />
           <Route exact path="/signin" component={SignIn} />

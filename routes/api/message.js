@@ -7,10 +7,10 @@ router.route("/")
   .post(messageController.create);
 
 // Matches with "/api/messages/:id"
-// router
-//   .route("/:id")
-//   .get(messageController.findById)
-//   .put(messageController.update)
-//   .delete(messageController.remove);
+router
+  .route("/:id")
+  .get(messageController.findById)
+  .put(messageController.update)
+  .delete(messageController.remove);
 
 module.exports = router;

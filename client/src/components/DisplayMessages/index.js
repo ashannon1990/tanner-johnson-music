@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,17 +19,15 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function displayMessage(name, email, message) {
+function createData(name, email, message) {
   return { name, email, message };
 }
 
 const rows = [
-  displayMessage('Name', 'Email', 'BLAH BLAH MESSAGE BLAH BLAH BLAH BLAH MESSAGE BLAH BLAH BLAH BLAH MESSAGE BLAH BLAH'),
-  displayMessage('Name', 'Email', 'BLAH BLAH MESSAGE BLAH BLAH BLAH BLAH MESSAGE BLAH BLAH BLAH BLAH MESSAGE BLAH BLAH'),
-  displayMessage('Name', 'Email', 'BLAH BLAH MESSAGE BLAH BLAH BLAH BLAH MESSAGE BLAH BLAH BLAH BLAH MESSAGE BLAH BLAH'),
-  displayMessage('Name', 'Email', 'BLAH BLAH MESSAGE BLAH ')
-]
-export default function SimpleTable() {
+  createData('Name', 'SampleEmail', 'BlahBlahBlah')
+];
+
+export default function SimpleTable(props) {
   const classes = useStyles();
 
   return (
@@ -48,11 +47,15 @@ export default function SimpleTable() {
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.email}</TableCell>
-              <TableCell align="right">{row.message}</TableCell>>
+              <TableCell align="right">{row.message}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+      <Button onClick={event => props.getMessages(event)}
+            variant="contained" color="primary" style={{ margin: '10px', background: '#333333' }} className={classes.button}>
+            Submit
+          </Button>
     </Paper>
   );
 }

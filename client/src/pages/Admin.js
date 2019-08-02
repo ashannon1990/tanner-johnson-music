@@ -16,11 +16,12 @@ class Admin extends Component {
   };
 
   getMessages = () => {
-    API.getMessages(this.state.messages)
+    API.getMessages(this.messageData)
       .then(res =>
-        this.setState({
-          message: res.data
-        })
+        console.log(res)
+        // this.setState({
+          // message: res.data
+        // })
       )
       .catch(() =>
         this.setState({
@@ -29,6 +30,8 @@ class Admin extends Component {
         })
       );
   };
+
+
 
   render() {
     return (
@@ -42,7 +45,7 @@ class Admin extends Component {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <DisplayMessages />
+              <DisplayMessages getMessages={this.getMessages} />
             </Grid>
           </Grid>
         </div>

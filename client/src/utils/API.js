@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default {
   // Gets all saved messages
-  getMessages: function() {
-    return axios.get("/api/messages");
+  getMessages: function(messageData) {
+    return axios.get("/api/messages", messageData);
   },
   // Deletes the saved message with the given id
   deleteMessage: function(id) {
