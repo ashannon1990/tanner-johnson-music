@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AddNewShow from '../components/AddNewShow';
-import DisplayMessages from '../components/DisplayMessages'
+import MyTable from '../components/MyTable'
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -9,19 +9,28 @@ import API from '../utils/API';
 
 
 class Admin extends Component {
+  state = {
+    headers: ['Name', 'Email', 'Message', 'Date'],
+    rows: []
+  }
+
   addUpcomingEvent = (event, eventData) => {
     event.preventDefault();
     console.log(eventData);
     API.addUpcomingEvent(eventData).then((res) => console.log(res));
   };
 
-  getMessages = () => {
+  componentDidMount() {
+    // const message = this.state.message;
     API.getMessages(this.messageData)
-      .then(res =>
-        console.log(res)
-        // this.setState({
-          // message: res.data
-        // })
+      .then(res => {
+        console.log(res.data)
+        const messageArray = res.data.map(data => [data.name, data.email, data.message, data.date])
+        console.log(messageArray)
+        this.setState({
+          rows: messageArray
+        })
+      }
       )
       .catch(() =>
         this.setState({
@@ -45,7 +54,7 @@ class Admin extends Component {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <DisplayMessages getMessages={this.getMessages} />
+              <MyTable headers={this.state.headers} rows={this.state.rows} />
             </Grid>
           </Grid>
         </div>
