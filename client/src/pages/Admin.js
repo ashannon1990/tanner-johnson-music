@@ -47,13 +47,13 @@ class Admin extends Component {
       <Container maxWidth='lg'>
         <div>
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={9} md={6}>
+            <Grid item xs={12} md={4}>
               <Paper style={{ margin: '20px', opacity: '.8' }}>
                 <Typography style={{ textAlign: 'center' }} variant="h4">Add New Shows Here</Typography>
                 <AddNewShow addUpcomingEvent={this.addUpcomingEvent} />
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={8}>
               <MyTable headers={this.state.headers} rows={this.state.rows} />
             </Grid>
           </Grid>
