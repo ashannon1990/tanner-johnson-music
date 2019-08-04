@@ -40,13 +40,7 @@ class Events extends Component {
     return (
       <Container maxWidth='lg'>
         <div>
-          <Grid container spacing={1}>
-            {/* <Grid item xs={12} sm={9} md={6}>
-              <Paper style={{ margin: '20px', opacity: '.8' }}>
-                <Typography style={{ textAlign: 'center' }} variant="h4">Add New Shows Here</Typography>
-                <AddNewShow addUpcomingEvent={this.addUpcomingEvent} />
-              </Paper>
-            </Grid> */}
+          <Grid container spacing={1} justify="center">
             <Grid item xs={12} md={8}>
             <Paper style={{ margin: '20px', opacity: '.8' }}>
             <Typography style={{ textAlign: 'center' }} variant="h4">Upcoming Events</Typography>

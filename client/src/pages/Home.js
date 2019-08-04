@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import './style.css'
 import Container from '@material-ui/core/Container';
 import SimpleSlider from '../components/Carousel/index'
-// import Typography from '@material-ui/core/Typography';
 
 class Home extends Component {
     render () {
@@ -14,9 +13,7 @@ class Home extends Component {
         <SimpleSlider />
         <Container maxWidth='lg'>    
         <div>
-            {/* <Jumbotron> */}
-                <Container>
-                
+                <Container>               
                 <Grid container spacing={3}
                 alignItems="center"
                 justify="center">
@@ -27,7 +24,6 @@ class Home extends Component {
                      </Grid>
                  </Grid>
                  </Container>
-            {/* </Jumbotron> */}
         </div>
         </Container>
         </div>
