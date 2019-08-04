@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar'
 import Link from '@material-ui/core/Link'
 
+
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
@@ -24,14 +25,17 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     flexWrap: 'wrap',
     background: '#333333',
-    color: 'white'
+    color: 'white',
   },
   toolbarTitle: {
     flexGrow: 1,
   },
   link: {
     margin: theme.spacing(1, 1.5),
-    color: 'white'
+    color: 'white',
+    // [theme.breakpoints.down('sm')]: {
+    //   display: 'none'
+    // }
   },
   heroContent: {
     padding: theme.spacing(8, 0, 6),

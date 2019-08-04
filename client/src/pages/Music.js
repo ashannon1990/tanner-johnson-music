@@ -9,7 +9,7 @@ export default function Music() {
     return (
       <Container maxWidth='lg'>
       <div>
-          <Typography style={{textAlign: 'center'}} variant="h3">Listen to some of my music</Typography>
+          <Typography style={{textAlign: 'center'}} variant="h3">Here are some video examples of my work.</Typography>
           <Grid container spacing={4}>
             <Grid item xs={12} sm={9} md={6}>
                  <Video />
@@ -19,7 +19,7 @@ export default function Music() {
             </Grid>
           </Grid>
           <br />
-          <Typography style={{textAlign: 'center'}} variant="h3">Listen to some of my music below</Typography>
+          <Typography style={{textAlign: 'center'}} variant="h4">Listen to some additional recordings I have done.</Typography>
           <SoundCloud />
 
       </div>
