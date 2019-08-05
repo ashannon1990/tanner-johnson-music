@@ -12,14 +12,26 @@ import Tanner6 from "../../photos/Tanner6.jpg"
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      arrows: false,
-      dots: false,
+      arrows: true,
+      dots: true,
+      centerMode: true,
       infinite: true,
       speed: 750,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000
+      autoplaySpeed: 5000,
+      responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          dots: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }]
     };
     return (
       <div>

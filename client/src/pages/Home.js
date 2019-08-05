@@ -10,13 +10,14 @@ class Home extends Component {
     render () {
         return (
             <div>
-        <SimpleSlider />
         <Container maxWidth='lg'>    
+        <SimpleSlider />
         <div>
                 <Container>               
                 <Grid container spacing={3}
                 alignItems="center"
                 justify="center">
+                    
                  <Grid item xs={12} sm={8} md={6} lg={3}>
                      <div id="myID">
                     <BioCard />

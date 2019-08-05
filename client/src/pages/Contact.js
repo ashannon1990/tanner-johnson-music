@@ -18,6 +18,7 @@ class ContactField extends Component {
       alert("Please enter a message")
     } else {
       API.saveMessage(messageData).then((res) => console.log(res));
+      alert("Thank you! Your message has been saved, and I will be in touch soon.")
     }
   };
 
