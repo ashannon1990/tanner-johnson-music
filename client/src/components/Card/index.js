@@ -33,7 +33,7 @@ export default function BioCard() {
             Tanner Johnson
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          I'm Tanner. I play music. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. I Specialize in weddings and corporate events. You should hire me.
+          I am a musician, multi instrumentalist, and composer local to Central Florida that specializes in weddings and corporate events. Check out some of my work and feel free to contact me about your upcoming event.
           </Typography>
         </CardContent>
       </CardActionArea>

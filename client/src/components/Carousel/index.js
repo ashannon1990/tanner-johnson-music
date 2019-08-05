@@ -12,9 +12,8 @@ import Tanner6 from "../../photos/Tanner6.jpg"
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      arrows: true,
+      arrows: false,
       dots: true,
-      centerMode: true,
       infinite: true,
       speed: 750,
       slidesToShow: 1,
