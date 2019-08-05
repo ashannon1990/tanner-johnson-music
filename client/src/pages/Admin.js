@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import API from '../utils/API';
+import moment from 'moment'
 
 
 class Admin extends Component {
@@ -25,7 +26,7 @@ class Admin extends Component {
     API.getMessages(this.messageData)
       .then(res => {
         console.log(res.data)
-        const messageArray = res.data.map(data => [data.name, data.email, data.message, data.date])
+        const messageArray = res.data.map(data => [data.name, data.email, data.message, moment(data.date).format("M/DD/YYYY hh:mm a")])
         console.log(messageArray)
         this.setState({
           rows: messageArray

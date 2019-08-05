@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import API from '../utils/API';
+import moment from 'moment'
 
 
 class Events extends Component {
@@ -19,7 +20,7 @@ class Events extends Component {
     API.getEvents(this.eventData)
       .then(res => {
         console.log(res.data)
-        const eventArray = res.data.map(data => [data.venueName, data.venueAddress, data.eventDate, data.eventTime])
+        const eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), data.eventTime])
         console.log(eventArray)
         this.setState({
           rows: eventArray
