@@ -4,7 +4,7 @@ import Container from '@material-ui/core/Container';
 
 export default function SignIn() {
     return (
-        <Container maxWidth='lg'>
+        <Container maxWidth='lg' style={{minHeight: '100vh'}}>
             <div>
                 <AdminSignIn />
 

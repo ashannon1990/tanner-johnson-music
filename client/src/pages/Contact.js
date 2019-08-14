@@ -24,7 +24,7 @@ class ContactField extends Component {
 
   render() {
     return (
-      <Container maxWidth='lg'>
+      <Container maxWidth='lg' style={{minHeight: '100vh'}}>
         <div>
           <Grid container spacing={1} justify="center">
             <Grid item xs={12} sm={9} md={7}>

@@ -45,7 +45,7 @@ class Admin extends Component {
 
   render() {
     return (
-      <Container maxWidth='lg'>
+      <Container maxWidth='lg' style={{minHeight: '100vh'}}>
         <div>
           <Grid container spacing={1}>
             <Grid item xs={12} md={4}>

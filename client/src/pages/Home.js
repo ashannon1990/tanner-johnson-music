@@ -13,7 +13,7 @@ class Home extends Component {
       <div>
         <SimpleSlider />
         <br /><br />
-        <Container maxWidth='lg'>
+        <Container maxWidth='lg' style={{minHeight: '100vh'}}>
           <div>
             <Paper style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
               <Grid container spacing={4}
