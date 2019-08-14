@@ -1,34 +1,37 @@
 import React, { Component } from "react";
-// import Jumbotron from '../components/Jumbotron/index'
 import BioCard from '../components/Card/index'
+import BioCard2 from '../components/Card/BioCard2'
 import Grid from '@material-ui/core/Grid';
-import './style.css'
 import Container from '@material-ui/core/Container';
 import SimpleSlider from '../components/Carousel/index'
+import Paper from '@material-ui/core/Paper'
+import './style.css'
 
 class Home extends Component {
-    render () {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
         <SimpleSlider />
-        <Container maxWidth='lg'>    
-        <div>
-                <Container>               
-                <Grid container spacing={3}
+        <br /><br />
+        <Container maxWidth='lg'>
+          <div>
+            <Paper style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
+              <Grid container spacing={4}
                 alignItems="center"
                 justify="center">
-                 <Grid item xs={12} sm={8} md={6} lg={3}>
-                     <div id="myID">
-                    <BioCard />
-                    </div>
-                     </Grid>
-                 </Grid>
-                 </Container>
-        </div>
+                <Grid item xs={12} sm={6} md={6} lg={4}>
+                  <BioCard />
+                </Grid>
+                <Grid item xs={12} sm={6} md={6} lg={4}>
+                  <BioCard2 />
+                </Grid>
+              </Grid>
+            </Paper>
+          </div>
         </Container>
-        </div>
-        )
-    }
+      </div>
+    )
+  }
 }
 
 export default Home
