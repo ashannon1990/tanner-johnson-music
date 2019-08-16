@@ -15,10 +15,13 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link'
 
-const drawerWidth = 240;
+const drawerWidth = 140;
 
 const useStyles = makeStyles(theme => ({
   root: {
+    [theme.breakpoints.down('sm')]: {
+        marginBottom: '75px',
+      },
     display: 'flex',
   },
   appBar: {
@@ -103,7 +106,7 @@ export default function PersistentDrawerRight() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar  className={classes.toolbar} style={{ boxShadow: '0px 3px 5px black' }}>
+        <Toolbar  className={classes.toolbar} style={{ boxShadow: '0px 3px 5px black'}}>
           <Typography variant="h6" noWrap className={classes.title}>
             Tanner Johnson Music
           </Typography>
