@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/index'
+import NavMobile from './components/NavMobile'
 import ContactField from './pages/Contact'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './pages/Home'
@@ -18,6 +19,7 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
+          <NavMobile />
           {/* <Home /> */}
           <Switch>
             <Route exact path="/" component={Home} />

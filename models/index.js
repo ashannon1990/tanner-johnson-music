@@ -1,5 +1,5 @@
 module.exports = {
-    Admin: require("./admin"),
+    User: require("./user"),
     Message: require("./message"),
     Event: require("./newEvent")
   };

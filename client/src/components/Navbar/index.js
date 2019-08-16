@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     background: '#333333',
     color: 'white',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
   },
   toolbarTitle: {
     flexGrow: 1,
@@ -33,9 +36,6 @@ const useStyles = makeStyles(theme => ({
   link: {
     margin: theme.spacing(1, 1.5),
     color: 'white',
-    // [theme.breakpoints.down('sm')]: {
-    //   display: 'none'
-    // }
   },
   heroContent: {
     padding: theme.spacing(8, 0, 6),
@@ -63,28 +63,28 @@ const useStyles = makeStyles(theme => ({
 
 function Navbar() {
   const classes = useStyles();
-    return (
-        <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
-          <Toolbar className={classes.toolbar} style={{boxShadow: '0px 3px 5px black'}}>
-            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-              Tanner Johnson Music
+  return (
+    <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+      <Toolbar className={classes.toolbar} style={{ boxShadow: '0px 3px 5px black' }}>
+        <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+          Tanner Johnson Music
             </Typography>
-            <nav>
-              <Link variant="button" color="textPrimary" href="/" className={classes.link}>
-                About Me
+        <nav>
+          <Link variant="button" color="textPrimary" href="/" className={classes.link}>
+            About Me
               </Link>
-              <Link variant="button" color="textPrimary" href="/mymusic" className={classes.link}>
-                My Music
+          <Link variant="button" color="textPrimary" href="/mymusic" className={classes.link}>
+            My Music
               </Link>
-              <Link variant="button" color="textPrimary" href="events" className={classes.link}>
-                Upcoming Events
+          <Link variant="button" color="textPrimary" href="events" className={classes.link}>
+            Upcoming Events
               </Link>
-              <Link variant="button" color="textPrimary" href="contact" className={classes.link}>
-                Contact
+          <Link variant="button" color="textPrimary" href="contact" className={classes.link}>
+            Contact
               </Link>
-            </nav>
-          </Toolbar>
-        </AppBar>
+        </nav>
+      </Toolbar>
+    </AppBar>
   )
 }
 export default Navbar;
