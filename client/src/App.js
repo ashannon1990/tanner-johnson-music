@@ -22,9 +22,9 @@ class App extends Component {
   }
   
   
-  // componentDidMount() {
-  //   this.isAuthorized();
-  // }
+  componentDidMount() {
+    this.isAuthorized();
+  }
 
   resetState = () => {
     this.setState({
