@@ -40,7 +40,7 @@ class Events extends Component {
 
   render() {
     return (
-      <Container maxWidth='lg' style={{minHeight: '100vh'}}>
+      <Container maxWidth='lg' style={{minHeight: '90vh'}}>
         <div>
           <Grid container spacing={1} justify="center">
             <Grid item xs={12} md={8}>

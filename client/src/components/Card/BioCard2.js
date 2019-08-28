@@ -13,6 +13,7 @@ import './style.css'
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
+    height: 500
   },
 });
 

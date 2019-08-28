@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper'
 
 export default function Music() {
     return (
-      <Container maxWidth='lg' style={{minHeight: '100vh'}}>
+      <Container maxWidth='lg' style={{minHeight: '90vh'}}>
       <div>
           <Paper style={{marginTop: '10px', background: 'rgba(255, 255, 255, 0.8)'}}>
           <Typography style={{textAlign: 'center'}} variant="h3">Here are some video examples of my work.</Typography>
