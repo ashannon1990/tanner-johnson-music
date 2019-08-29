@@ -23,14 +23,17 @@ class Admin extends Component {
     API.addUpcomingEvent(eventData).then((res) => console.log(res));
   };
 
-
+  handleMessageDelete = id => {
+    API.deleteMessage(id).then(res => API.getMessages());
+    window.location.reload();
+  }
 
   componentDidMount() {
     // const message = this.state.message;
     API.getMessages(this.messageData)
       .then(res => {
         console.log(res.data)
-        const messageArray = res.data.map(data => [data.name, data.email, data.message, moment(data.date).format("M/DD/YYYY hh:mm a"), <Button className="deleteButton" style={{background: '#333333', color: 'white'}}>Delete</Button>])
+        const messageArray = res.data.map(data => [data.name, data.email, data.message, moment(data.date).format("M/DD/YYYY hh:mm a"), <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleMessageDelete(data._id)}>Delete</Button>])
         console.log(messageArray)
         this.setState({
           rows: messageArray
@@ -45,6 +48,7 @@ class Admin extends Component {
       );
   };
 
+  
 
 
   render() {

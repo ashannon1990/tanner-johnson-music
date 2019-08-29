@@ -15,19 +15,3 @@ router.use((req, res) =>
 
 
 module.exports = router;
-
-//middleware
-// module.exports = function (app) {
-
-//   app.post('/login',
-//     passport.authenticate('local', {
-//       successRedirect: '/admin',
-//       failureRedirect: '/login',
-//       failureFlash: true
-//     })
-//   );
-//   app.get("/admin", function(req, res) {
-//     res.render('/admin')
-//   });
-
-// }
