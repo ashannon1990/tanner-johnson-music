@@ -19,8 +19,8 @@ export default {
     return axios.get("/api/messages", messageData);
   },
   // Deletes the saved message with the given id
-  deleteMessage: function(id) {
-    return axios.delete("/api/messages/" + id);
+  deleteMessage: function(messageData) {
+    return axios.delete("/api/messages/", messageData);
   },
   // Saves an message to the database
   saveMessage: function(messageData) {

@@ -6,7 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import API from '../utils/API';
-import moment from 'moment'
+import moment from 'moment';
+import Button from '@material-ui/core/Button';
+
 
 
 class Admin extends Component {
@@ -21,12 +23,14 @@ class Admin extends Component {
     API.addUpcomingEvent(eventData).then((res) => console.log(res));
   };
 
+
+
   componentDidMount() {
     // const message = this.state.message;
     API.getMessages(this.messageData)
       .then(res => {
         console.log(res.data)
-        const messageArray = res.data.map(data => [data.name, data.email, data.message, moment(data.date).format("M/DD/YYYY hh:mm a")])
+        const messageArray = res.data.map(data => [data.name, data.email, data.message, moment(data.date).format("M/DD/YYYY hh:mm a"), <Button className="deleteButton" style={{background: '#333333', color: 'white'}}>Delete</Button>])
         console.log(messageArray)
         this.setState({
           rows: messageArray
