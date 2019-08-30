@@ -3,16 +3,16 @@ import axios from "axios";
 export default {
   //authentication
   register: function (user) {
-    return axios.post("/api/register", user);
+    return axios.post("/api/register/", user);
   },
   login: function (user) {
-    return axios.post("/api/login", user);
+    return axios.post("/api/login/", user);
   },
   isAuthorized: function () {
-    return axios.get("/api/authorized");
+    return axios.get("/api/authorized/");
   },
   logout: function () {
-    return axios.get("/api/logout");
+    return axios.get("/api/logout/");
   },
   //get messages to display
   getMessages: function(messageData) {
@@ -33,6 +33,6 @@ export default {
     return axios.post("/api/events", eventData);
   },
   deleteEvent: function(id) {
-    return axios.delete("/api/events" + id)
+    return axios.delete("/api/events/" + id)
   }
 };
