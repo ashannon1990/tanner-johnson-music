@@ -56,8 +56,8 @@ class Admin extends Component {
       API.getEvents(this.messageData)
       .then(res => {
         console.log(res.data)
-        const eventArray = res.data.map(data => [data.venueName, data.venueAddress, data.eventDate, data.eventTime, <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleEventDelete(data._id)}>Delete</Button>])
-        console.log(eventArray)
+        const eventArray = res.data.map(data => [data.venueName, data.venueAddress, data.eventDate, data.eventTime, <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleEventDelete(data._id)}>Delete</Button>,]);
+        console.log(eventArray);
         this.setState({
           rowsEvents: eventArray
         })
