@@ -56,7 +56,10 @@ class Admin extends Component {
       API.getEvents(this.messageData)
       .then(res => {
         console.log(res.data)
-        const eventArray = res.data.map(data => [data.venueName, data.venueAddress, data.eventDate, data.eventTime, <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleEventDelete(data._id)}>Delete</Button>,]);
+        let eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), data.eventTime, <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleEventDelete(data._id)}>Delete</Button>,]);
+        eventArray = eventArray.sort((a, b) => {
+          return (a[2] > b[2]) ? 1 : -1;
+        });
         console.log(eventArray);
         this.setState({
           rowsEvents: eventArray
