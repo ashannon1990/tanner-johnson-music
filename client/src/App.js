@@ -36,7 +36,7 @@ class App extends Component {
   isAuthorized = () => {
     API.isAuthorized()
       .then(res => {
-        this.setState({ wait404: false });
+        this.setState({ isAuth: false });
         if (res.data.message) {
           this.resetState();
         } else {

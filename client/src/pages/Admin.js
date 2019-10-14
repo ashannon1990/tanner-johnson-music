@@ -57,6 +57,7 @@ class Admin extends Component {
       .then(res => {
         console.log(res.data)
         let eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), data.eventTime, <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleEventDelete(data._id)}>Delete</Button>,]);
+        // sort the array
         eventArray = eventArray.sort((a, b) => {
           return (a[2] > b[2]) ? 1 : -1;
         });
