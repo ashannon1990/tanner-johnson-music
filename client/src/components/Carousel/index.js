@@ -11,7 +11,7 @@ import Tanner6 from "../../photos/Tanner6.jpg"
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      arrows: true,
+      arrows: false,
       dots: true,
       infinite: true,
       speed: 800,
@@ -33,7 +33,7 @@ export default class SimpleSlider extends Component {
     };
     return (
       <div>
-        <Container style={{marginTop: 3}}>
+        {/* <Container style={{marginTop: 3}}> */}
           <Slider {...settings}>
             <div>
               <img style={{ width: '100%' }} src={Tanner1} alt='pic' />
@@ -45,7 +45,7 @@ export default class SimpleSlider extends Component {
               <img style={{ width: '100%' }} src={Tanner6} alt='pic' />
             </div>
           </Slider>
-        </Container>
+        {/* </Container> */}
       </div>
     );
   }

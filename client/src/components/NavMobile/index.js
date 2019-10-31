@@ -15,7 +15,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link'
 
-const drawerWidth = 140;
+const drawerWidth = 300;
 
 const useStyles = makeStyles(theme => ({
   root: {

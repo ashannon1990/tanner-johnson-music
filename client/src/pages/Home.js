@@ -15,7 +15,7 @@ class Home extends Component {
         <br /><br />
         <Container maxWidth='lg' style={{minHeight: '90vh'}}>
           <div>
-            <Paper style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
+            <Paper style={{ background: 'rgba(255, 255, 255, 0.4)', marginBottom: 30}}>
               <Grid container spacing={4}
                 alignItems="center"
                 justify="center">
