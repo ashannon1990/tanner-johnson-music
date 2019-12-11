@@ -20,11 +20,9 @@ class Events extends Component {
     API.getEvents(this.eventData)
       .then(res => {
         console.log(res.data)
-        let eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), data.eventTime]);
+        let eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), moment(data.eventTime, "HH:mm").format("h:mma")]);
         // sort the array
-        eventArray = eventArray.sort((a, b) => {
-          return (a[2] > b[2]) ? 1 : -1;
-        })
+      
         console.log(eventArray)
         this.setState({
           rows: eventArray
