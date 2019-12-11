@@ -21,8 +21,6 @@ class Events extends Component {
       .then(res => {
         console.log(res.data)
         let eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), moment(data.eventTime, "HH:mm").format("h:mma")]);
-        // sort the array
-      
         console.log(eventArray)
         this.setState({
           rows: eventArray

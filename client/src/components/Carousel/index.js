@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Container from '@material-ui/core/Container'
+// import Container from '@material-ui/core/Container'
 import Tanner1 from "../../photos/Tanner1.jpg"
 import Tanner3 from "../../photos/Tanner3.jpg"
 import Tanner6 from "../../photos/Tanner6.jpg"
