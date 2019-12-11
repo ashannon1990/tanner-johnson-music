@@ -40,13 +40,11 @@ export default function BioCard() {
                 <Grid item xs={6}>
           <Typography variant="body2" color="textSecondary" component="ul">
           Instruments:
-          
             <li>Violin</li>
             <li>Guitar</li>
             <li>Mandolin</li>
             <li>Cello</li>
             <li>Piano</li>
-          
           </Typography>
           
           </Grid>
