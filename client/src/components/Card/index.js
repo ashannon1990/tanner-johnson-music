@@ -21,7 +21,7 @@ export default function BioCard() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card} id="bioCard">
+    <Card className={classes.card} id="bioCard" style={{ margin:'auto' }}>
       <CardActionArea>
         <CardMedia
           component="img"
