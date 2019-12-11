@@ -38,28 +38,26 @@ export default function BioCard() {
                 alignItems="center"
                 justify="center">
                 <Grid item xs={6}>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="ul">
           Instruments:
-          <ul>
+          
             <li>Violin</li>
             <li>Guitar</li>
             <li>Mandolin</li>
             <li>Cello</li>
             <li>Piano</li>
-          </ul>
+          
           </Typography>
           
           </Grid>
           <Grid item xs={6}>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="ul">
           Genres:
-          <ul>
             <li>Classical</li>
             <li>Jazz</li>
             <li>Rock</li>
             <li>Pop</li>
             <li>Bluegrass</li>
-          </ul>
           </Typography>
           </Grid>
           </Grid>
