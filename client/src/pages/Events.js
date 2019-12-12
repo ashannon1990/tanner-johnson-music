@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import MyTable from '../components/MyTable'
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import { 
+  Container,
+  Grid,
+  Paper,
+  Typography 
+} from '@material-ui/core';
 import API from '../utils/API';
 import moment from 'moment'
 
