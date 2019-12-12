@@ -39,7 +39,7 @@ export default function BioCard() {
                 alignItems="center"
                 justify="center">
                 <Grid item xs={6}>
-          <Typography variant="body2" color="textSecondary" component="ul">
+          <Typography variant="body2" color="textSecondary" component="ul" style={{color: 'black'}}>
           Instruments:
             <li>Violin</li>
             <li>Guitar</li>
@@ -50,7 +50,7 @@ export default function BioCard() {
           
           </Grid>
           <Grid item xs={6}>
-          <Typography variant="body2" color="textSecondary" component="ul">
+          <Typography variant="body2" color="textSecondary" component="ul" style={{color: 'black'}}>
           Genres:
             <li>Classical</li>
             <li>Jazz</li>

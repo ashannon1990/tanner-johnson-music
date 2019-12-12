@@ -34,7 +34,7 @@ export default function BioCard() {
           <Typography gutterBottom variant="h5" component="h2">
             Tanner Johnson
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" style={{color: 'black'}}>
           I am a musician, multi instrumentalist, and composer local to Central Florida that specializes in weddings and corporate events. Check out some of my work and feel free to contact me about your upcoming event.
           </Typography>
         </CardContent>
