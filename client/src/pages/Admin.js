@@ -57,10 +57,6 @@ class Admin extends Component {
       .then(res => {
         console.log(res.data)
         let eventArray = res.data.map(data => [data.venueName, data.venueAddress, moment(data.eventDate).format("M/DD/YYYY"), data.eventTime, <Button style={{background: '#333333', color: 'white'}} onClick={() => this.handleEventDelete(data._id)}>Delete</Button>,]);
-        // sort the array
-        eventArray = eventArray.sort((a, b) => {
-          return (a[2] > b[2]) ? 1 : -1;
-        });
         console.log(eventArray);
         this.setState({
           rowsEvents: eventArray
@@ -90,8 +86,8 @@ class Admin extends Component {
               </Paper>
             </Grid>
             <Grid item xs={12} md={8}>
-              <MyTable headers={this.state.headers} rows={this.state.rows} />
-              <MyTable headers={this.state.headersEvents} rows={this.state.rowsEvents} />
+              <MyTable title="Messages" headers={this.state.headers} rows={this.state.rows} />
+              <MyTable title="Upcoming events" headers={this.state.headersEvents} rows={this.state.rowsEvents} />
             </Grid>
           </Grid>
         </div>
