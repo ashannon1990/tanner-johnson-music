@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
 import Contact from '../components/Contact/index'
-import Grid from '@material-ui/core/Grid'
-import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import { Grid, Container, Paper, Typography } from '@material-ui/core'
 import API from '../utils/API'
 
 class ContactField extends Component {
 
   saveMessage = (event, messageData) => {
     event.preventDefault();
-    if (messageData.name === '') {
-      alert("Enter your name")
-    } else if (messageData.email === '') {
-      alert("Enter your email")
-    } else if (messageData.message === '') {
-      alert("Please enter a message")
+    if (messageData.name === '' || messageData.email === '' || messageData.message === '') {
+      alert("Enter all required fields")
     } else {
       API.saveMessage(messageData).then((res) => console.log(res));
       alert("Thank you! Your message has been saved, and I will be in touch soon.")
